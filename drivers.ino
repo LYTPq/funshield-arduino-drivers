@@ -545,18 +545,6 @@ unsigned long currentTime;
 
 void setup() {
 
-  for (int i = 0; i < buttonsCount; ++i) {
-    buttons[i].initialize(i);
-  }
-  
-  numericDisplay.initialize();
-  stopwatch.initialize();
-  currentTime = millis();
-
-  // for (int i = 0; i < buttonsCount - 1; ++i) {
-  //   buttons[i].timerInitialize(waitingInterval, currentTime);
-  // }
-  // numeric_display.setNumber(0, 1);
 
 }
 
@@ -564,9 +552,6 @@ void setup() {
 
 void loop() {
   currentTime = millis();
-  stopwatch.buttonHandler(currentTime);
-  stopwatch.update(currentTime);
-  numericDisplay.update();
 
 }
 
